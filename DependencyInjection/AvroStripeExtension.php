@@ -29,7 +29,7 @@ class AvroStripeExtension extends Extension
                 $loader->load('mongodb.yml');
             break;
             case 'orm':
-                //TODO
+                $loader->load('orm.yml');
             break;
         }
 
