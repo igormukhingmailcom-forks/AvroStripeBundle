@@ -11,8 +11,8 @@ abstract class Plan implements PlanInterface
 {
     protected $name;
     protected $amount;
-    protected $currency;
-    protected $interval;
+    protected $currency = 'USD';
+    protected $interval = 'month';
     protected $isActive = true;
 
     public function getName()

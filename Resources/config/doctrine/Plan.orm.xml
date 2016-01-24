@@ -6,10 +6,17 @@ http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
 
     <mapped-superclass name="Avro\StripeBundle\Entity\Plan">
         <field name="name" column="name" type="string" />
-        <field name="amount" column="amount" type="string" />
-        <field name="currency" column="currency" type="string" />
-        <field name="interval" column="interval" type="string" />
-        <field name="isActive" column="isActive" type="boolean" />
+        <field name="amount" column="amount" type="decimal" />
+        <field name="currency" column="currency" type="string" length="3" />
+        <field name="interval" column="`interval`" type="string" />
+        <field name="isActive" column="is_active" type="boolean" />
+
+        <indexes>
+            <index unique="true" dropDups="true">
+                <key name="name" order="asc" />
+                <option name="safe" value="true" />
+            </index>
+        </indexes>
     </mapped-superclass>
 
 </doctrine-mapping>

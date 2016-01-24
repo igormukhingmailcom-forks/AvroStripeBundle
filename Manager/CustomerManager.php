@@ -61,7 +61,7 @@ class CustomerManager
               "card" => $this->getToken(),
               "email" => $this->user->getEmail(),
               "plan" => $planId,
-              "coupon" => $this->user->getCoupon()
+//              "coupon" => $this->user->getCoupon()
             ));
 
             $plan = $this->planManager->find($planId);
